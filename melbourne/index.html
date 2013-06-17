@@ -1,0 +1,1179 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Appfail</title>
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+    
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="start" class="step slide" data-x="0" data-y="0">
+        <img src="css/logo.png" />
+        <h2 style="text-align:center">The story of a Melbourne .NET startup</h2>
+
+    </div>
+
+    <div id="intro" class="step slide" data-x="1000" data-y="0">
+        <h1>Welcome!</h1>
+        <h3>We're the co-founders of Appfail</h3>
+        <h3>An online cloud-hosted SAAS</h3>
+        <h3>Provides failure monitoring for thousands of web sites</h3>
+        <h3>Provides web site administrators with rich analytics and detailed information about failures.</h3>
+    </div>
+    <div id="intro-2" class="step slide peter" data-x="1000" data-y="700">
+        <h1>This is the story of Appfail</h1>
+        <h3>Over the past 18 months:</h3>
+        <ul>
+            <li>The idea</li>
+            <li>The product</li>
+            <li>The build</li>
+            <li>The launch</li>
+            <li>Growing the business</li>
+            <li>A reflection</li>
+        </ul>
+    </div>
+
+    <div id="intro-3" class="step slide" data-x="1000" data-y="1400">
+        <h1>Who is this for?</h1>
+        <h3>Software developers, or...</h3>
+        <h3>Anyone interested in getting involved in a web/software startup!</h3>
+    </div>
+
+    <div id="sam" class="step slide" data-x="2000" data-y="0">
+        <h1>Sam Kroonenburg</h1>
+        <br />
+        <img src="css\me.jpg" width="202" style="float:left; margin-top:0; margin-right: 25px;">
+        <div style="margin-left:227px">
+        <h2>@samkroon</h2>
+        <h3>Software Development Manager at Kiandra IT</h3>
+        <h3>Ex-Microsoftie</h3>
+        <h4>Developer on Windows Vista, Server 2008 &amp; Windows 7</h4>
+        <h4>Disk Defragmenter, Volume Shrink, Windows Backup</h4>
+        <h4>FAST Search For Internet Sites 2011</h4>
+    </div>
+        
+    </div>
+
+    <div id="peter" class="step slide peter" data-x="2000" data-y="1000">
+        <h1>Dr Peter Sbarski: "The Doctor"</h1>
+        <br />
+        <img src="css\peter.jpg" width="202" style="float:left; margin-top:0; margin-right: 25px;">
+        <div style="margin-left:227px">
+        <h2>@sbarski</h2>
+        <h3>Software Developer at Kiandra IT</h3>
+        <h3>Monash Uni PhD</h3>
+        <h3>Ex-government policy-wonk</h3>
+        <h3>All around nice guy</h3>
+            </div>
+        
+    </div>
+
+    <div id="idea" class="step slide section peter" data-x="3000" data-y="0" data-rotate-x="90">
+       <h1>The idea</h1>
+    </div>
+
+    <div id="Div3" class="step slide peter" data-x="3000" data-y="0" data-z="1000" data-rotate-x="90">
+       <h1>First, let's define a failure</h1>
+        <h3>When a piece of code running the web site, crashes unexpectedly</h3>
+        <h3>Something happens that the programmer didn't forsee</h3>
+        <h3>Manifests to end user as:</h3>
+        <ul>
+            <li>An error page<br /><img src="css/facebookog.jpg" /></li>
+            <li>An action not working (eg. 'add to cart' does nothing)</li>
+        </ul>
+        <h3>Popular web sites can experience tens of thousands of failures per day</h3>
+    </div>
+
+
+    <div id="idea-rant" class="step slide" data-x="3000" data-y="0">
+       <h1>It started with a...</h1>
+        <h1 style="font-size:190px;">&lt;rant&gt;</h1>
+    </div>
+
+    
+
+    <div id="idea-rant-vision" class="step slide" data-x="4000" data-y="0">
+        <h1>Web site failures cost money!</h1>
+       <ul>
+            <li>Rich tools for user traffic &amp; behaviour like Omniture and Google Analytics.</li>
+            <li>Extremely basic failure logging tools</li>
+            <li>Fed up with parsing ELMAH logs and emails!</li>
+            <li>When you web site fails, your users leave!</li>
+            <li>You've done all the work to get your users in...</li>
+            <li>Why do we let a site fail silently or obscurely, and let our valuable users leave?</li>
+        </ul>
+    </div>
+
+     <div id="idea-rant-phew" class="step slide " data-x="5000" data-y="0">
+
+  <h1>Phew...</h1>
+        <h1 style="font-size:190px;">&lt;/rant&gt;</h1>
+
+    </div>
+
+
+    <div id="idea-context" class="step slide" data-x="6000" data-y="0">
+                <h1>Windows Error Reporting</h1>
+        <h3>At Microsoft, we knew when Windows failed.</h3>
+        <br />
+        <h3>With Windows Error Reporting:</h3>
+        <ul>
+            <li>See which failures are occurring most frequently.</li>
+            <li>
+                Get a quick idea of the severity by looking at the exception details and stack trace.
+            </li>
+        </ul>
+    </div>
+
+    <div id="idea-dream" class="step slide peter" data-x="7000" data-y="0">
+
+        
+        <h1>Wouldn't it be nice if...</h1>
+        <h3>Our apps automatically detected unhandled errors and reported them to a cloud service with <b>rich failure analytics.</b></h3>
+    </div>
+
+    <div id="idea-dream-detail" class="step slide peter" data-x="8000" data-y="0">
+        
+                  <h1>A cloud service which</h1>
+        
+        <ul>
+            <li>Helped us find & fix the failures that <b>actually mattered</b></li>
+            <li>Gave us an indication of failure rates over time</li>
+            <li>Helped us track fixes, to make sure they truly work</li>
+            <li>Could email us only about failures we care about</li>
+            <li>Could SMS us with absolutely critical failures</li>
+        </ul>
+
+    </div>
+
+    <div id="idea-dream-realization" class="step slide peter" data-x="9000" data-y="0">
+        <h1>So We Built It!</h1>
+        <h2>Product Goals</h2>
+        <ul>
+            <li>Simple to plug in</li>
+            <li>Support multiple languages</li>
+            <li>Scalable</li>
+            <li>Focus on the web. Do one thing &amp; do it well.</li>
+        </ul><br />
+        <h2>Personal Goals</h2>
+        <ul>
+            <li>Learn new things!</li>
+            <li>Work in our spare time</li>
+            <li>Very low cost to run</li>
+        </ul>
+    </div>
+
+    <div id="idea-users" class="step slide" data-x="9000" data-y="700">
+        <h1>Who uses Appfail?</h1>
+        <h2>We monitor thousands of web sites across the world:</h2>
+        <ul>
+            <li>United States</li>
+            <li>United Kingdom</li>
+            <li>Scandinavia</li>
+            <li>Continental Europe</li>
+            <li>Australia</li>
+        </ul>
+        <h3>Corporates, startups & government.</h3>
+        <br />
+        <h3>Many large, global brands are monitored by Appfail.</h3>
+        <h3>But we can't tell you who!</h3>
+
+    </div>
+
+    
+    <div id="product-intro" class="step slide section" data-x="10000" data-y="0" data-rotate-x="90">
+       <h1>The product</h1>
+    </div>
+
+
+    <div id="product-demo" class="step slide" data-x="10000" data-y="0">
+        <h1>Demo Time!</h1>
+        <video width="640" height="360" controls="controls">
+            <source src="demo.mov#t=2,99" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="build-start" class="step slide section peter" data-x="11000" data-y="0" data-rotate-x="90">
+       <h1>The build</h1>
+    </div>
+
+    <div id="build-intro" class="step slide peter" data-x="11000" data-y="0">
+        <h1>Building Appfail</h1>
+        <h3>Started in Jan 2012 &amp; worked for 5 months</h3>
+    </div>
+
+    <div id="build-goals" class="step slide peter" data-x="11000" data-y="700">
+        <h1>Building Appfail: Tech</h1>
+        <h3>Code like the cool kids!</h3>
+        <ul>
+            <li>C# & MVC3</li>
+            <li>Twitter Bootstrap (heavily customized)</li>
+            <li>GitHub (Source & Issues)</li>
+            <li>AppHarbor (hosting/deployment)
+                <ul>
+                    <li>New Relic</li>
+                    <li>Memcached</li>
+                    <li>MongoHQ</li>
+                </ul>
+            </li>
+            <li>Amazon
+                <ul>
+                    <li>SQS, SNS</li>
+                    <li>S3, EC2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="build-cost" class="step slide peter" data-x="11000" data-y="1400">
+        <h1>Building Appfail: Keep It Low Cost</h1>
+        <h3>During development, it cost almost nothing!</h3>
+        <ul>
+            <li>GitHub ($7/mo)</li>
+            <li>AppHarbor (free)
+                <ul>
+                    <li>New Relic (free)</li>
+                    <li>Memcached (free)</li>
+                    <li>MongoHQ (free)</li>
+                </ul>
+            </li>
+            <li>Amazon SQS (almost free)</li>
+        </ul>
+        <h3>We were lean & had no costs!</h3>
+    </div>
+
+    <div id="build-outsource" class="step slide" data-x="11000" data-y="-8000" data-rotate-y="90">
+        <h1>Remember, nearly everything is already a solved problem!</h1>
+        <h1>Outsource everything that isn't your core product!</h1>
+    </div>
+
+    <div id="build-services" class="step slide" data-x="11000" data-y="-8700" data-rotate-y="110">
+        <h1>Here's all the services we used to build Appfail, initially.</h1>
+    </div>
+
+    
+    <div id="build-appfail-cloud" class="step slide no-logo" data-x="11000" data-y="-10000" data-z="-2000" data-rotate-x="90" data-rotate-y="110" data-scale="1.7" style="text-align:center;">
+        <img src="css/logo.png" style="zoom: 0.6; margin-top: 270px; margin-right: 60px;" />
+    </div>
+
+          <div id="Div37" class="step slide no-logo service" data-x="11000" data-y="-9750" data-z="-2150" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/saasy.png" />
+    </div>
+
+     <div id="Div38" class="step slide no-logo service" data-x="11000" data-y="-9550" data-z="-1660" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/tender.gif" />
+    </div>
+    
+     <div id="Div39" class="step slide no-logo service" data-x="11000" data-y="-9750" data-z="-1560" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/url2png.png" />
+    </div>
+
+     <div id="Div40" class="step slide no-logo service" data-next="build-lesson" data-x="11000" data-y="-9950" data-z="-1650" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/vianett.png" />
+    </div>
+
+
+    <div id="services-final" class="step slide no-logo" data-x="11000" data-y="-10000" data-z="-2000" data-rotate-x="90" data-rotate-y="110" data-scale="1.7" style="text-align:center;">
+        
+    </div>
+
+    
+    <div id="next-slide" class="step slide peter" data-x="12000" data-y="-2000">
+        <a href="#build-lesson">Next</a>
+    </div>
+
+    <div id="Div18" class="step slide no-logo service" data-x="11000" data-y="-10500" data-z="-2000" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/99designs.PNG" />
+    </div>
+
+      <div id="Div19" class="step slide no-logo service" data-x="11000" data-y="-10300" data-z="-2130" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/appharbor.PNG" />
+    </div>
+
+      <div id="Div20" class="step slide no-logo service" data-x="11000" data-y="-10150" data-z="-2260" data-rotate-x="90" data-rotate-y="110" >
+        
+          <img src="css/services/amazon.png" />
+    </div>
+
+      <div id="Div21" class="step slide no-logo service" data-x="11000" data-y="-9800" data-z="-2250" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/aws-ec2.png" />
+    </div>
+
+          <div id="Div22" class="step slide no-logo service" data-x="11000" data-y="-9550" data-z="-2200" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/aws-s3.png" />
+    </div>
+
+    <div id="Div23" class="step slide no-logo service" data-x="11000" data-y="-9350" data-z="-2110" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/aws-sns.png" />
+    </div>
+
+    <div id="Div24" class="step slide no-logo service" data-x="11000" data-y="-9200" data-z="-2000" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/aws-sqs.png" />
+    </div>
+
+     <div id="Div25" class="step slide no-logo service" data-x="11000" data-y="-9150" data-z="-1850" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/dnsimple.png" />
+    </div>
+
+      <div id="Div26" class="step slide no-logo service" data-x="11000" data-y="-9200" data-z="-1700" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/ecompanies.png" />
+    </div>
+
+
+      <div id="Div27" class="step slide no-logo service" data-x="11000" data-y="-9325" data-z="-1620" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/github.png" />
+    </div>
+
+    <div id="Div28" class="step slide no-logo service" data-x="11000" data-y="-9450" data-z="-1500" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/googleadwords.png" />
+    </div>
+
+    <div id="Div29" class="step slide no-logo service" data-x="11000" data-y="-9600" data-z="-1380" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/googleanalytics.png" />
+    </div>
+
+    <div id="Div30" class="step slide no-logo service" data-x="11000" data-y="-9800" data-z="-1250" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/googleappsforbusiness.png" />
+    </div>
+
+        <div id="Div31" class="step slide no-logo service" data-x="11000" data-y="-10000" data-z="-1330" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/mailchimp.png" />
+    </div>
+
+
+
+     <div id="Div32" class="step slide no-logo service" data-x="11000" data-y="-10200" data-z="-1450" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/memcacher.png" />
+    </div>
+
+ 
+       <div id="Div2" class="step slide no-logo service" data-x="11000" data-y="-10350" data-z="-1575" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/mongohq.png" />
+    </div>
+
+     <div id="Div33" class="step slide no-logo service" data-x="11000" data-y="-10500" data-z="-1700" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/newrelic.png" />
+    </div>
+
+     <div id="Div34" class="step slide no-logo service" data-x="11000" data-y="-10650" data-z="-1860" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/powtoon.png" />
+    </div>
+
+     <div id="Div35" class="step slide no-logo service" data-x="11000" data-y="-9950" data-z="-2065" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/prweb.png" />
+    </div>
+
+
+
+     <div id="Div36" class="step slide no-logo service" data-x="11000" data-y="-9550" data-z="-2015" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/rapidssl.png" />
+    </div>
+
+     <div id="Div41" class="step slide no-logo service" data-x="11000" data-y="-9750" data-z="-1470" data-rotate-x="90" data-rotate-y="110" >
+        <img src="css/services/voicebunny.png" />
+    </div>
+
+    <div id="build-lesson" class="step slide peter" data-x="12000" data-y="0">
+        <h1>Challenge Assumptions</h1>
+        <h3>Test your ideas & think like a user!</h3>
+        <h3>Draw the feature on paper & walk through it as a user.</h3>
+        <h4>We:</h4>
+
+        <ul>
+            <li>Built a major feature.</li>
+            <li>It was fantastic!</li>
+            <li>A large investment of time.</li>
+            <li>When we actually went to use it...</li>
+            <li>It didn't make any sense!</li>
+        </ul>
+    </div>
+
+     <div id="build-rules-idea" class="step slide peter" data-x="12000" data-y="1000">
+        <h1>The Great Rules Engine Debacle!</h1>
+        <h3>Grand idea: Appfail automatically rates 'severity' of failures.</h3>
+        <h3>Determined with complex, customizable rules.</h3>
+        <h4>For example, a set of ANDed rules based on:</h4>
+
+        <ul>
+            <li>Exception Type</li>
+            <li>URL</li>
+            <li>HTTP Verb</li>
+        </ul>
+         <h4>Built a complex UI for defining rules, and background worker to execute these rules and assign severities.</h4>
+         <h4>Hooked this into notifications - eg. SMS me when an 'Extreme' severity failure occurs.</h4>
+    </div>
+
+    
+
+    <div id="build-rules-issue" class="step slide peter" data-x="12000" data-y="2000">
+        <h1>The Great Rules Engine Debacle!</h1>
+        <h3>We were struggling to implement a simple UI</h3>
+        <h3>We sat down & said: &quot;How would we apply this to web site X?&quot;</h3>
+        <h3>The more time we spent trying to actually <i>use</i> the feature, the more we realised it didn't make any sense!</h3>
+    </div>
+
+    
+    <div id="build-rules-truth" class="step slide peter" data-x="12000" data-y="3000">
+        <h1>The Great Rules Engine Debacle!</h1>
+        <h3>The truth is: All unhandled exceptions are bad!</h3>
+        <h3>They *all* stop the user from performing an action, and they all detract the web-site's brand.</h3>
+        <h3>URL Scoping:</h3>
+        <h4>Any page failing in a user's path to the order page is equally bad! Eg. the product page, the search page, the category browser.</h4>
+        <h3>It's hard to define rules that say exactly what is severe and what isn't.</h3>
+    </div>
+    
+    
+    <div id="build-design" class="step slide" data-x="13000" data-y="0">
+        <h1>Design matters</h1>
+        <h3>Great design:</h3>
+        <ul>
+            <li>Makes people notice your product</li>
+            <li>Increases likelyhood that they will share it</li>
+            <li>Conveys professionalism</li>
+            <li>Early on, makes you appear established & increases trust</li>
+        </ul>
+        <h3>So, how did we achieve this?</h3>
+    </div>
+
+        <div id="build-design-help" class="step slide" data-x="13000" data-y="700">
+        <h1>Designing Appfail: First, we got help!</h1>
+        
+        <h3>If you're not good at something, get as much help as possible!</h3> 
+        <h3>We didn't have a designer, but we did get some great advice.</h3>
+        <h3>Tait Brown, an awesome front-end dev, pointed us to a lot of great resources.</h3>
+        <h3>Here's what we did</h3>
+    </div>
+
+    <div id="build-design-colours" class="step slide" data-x="13000" data-y="1400">
+        <h1>Designing Appfail: Outsource your colours</h1>
+        <h3>First, we chose a colour scheme</h3>
+        <h3>http://colourlovers.com</h3>
+        <img src="css/colourlovers.png" width="700px" />
+    </div>
+
+    <div id="build-design-chosencolours" class="step slide" data-x="14700" data-y="1400" data-z="-1000" data-rotate-y="90">
+        <h1>Failures are depressing enough!</h1>
+        <h3>So we opted for vibrant & fun</h3>
+        <h3>To inspire our users to destroy those failures!</h3>
+        <img src="css/colour.png" />
+    </div>
+
+    <div id="build-design-copy" class="step slide" data-x="13000" data-y="2100">
+        <h1>Designing Appfail: Copy others!</h1>
+        <h3>Then, we found a web site layout that we liked</h3>
+        <h3>This would be great for Appfail's dashboard</h3>
+        <h3>Google Plus</h3>
+        <img src="css/googleplus.png" />
+    </div>
+
+    <div id="build-dribbble-1" class="step slide" data-x="13000" data-y="2800">
+        <h1>Designing Appfail: Copy others!</h1>
+        <h3>Expanding on this concept, we got inspiration from dribbble.</h3>
+        <h3>A community of passionate designers, who share amazing designs</h3>
+        <img src="css/dribbble-1.png" width="654px" />
+    </div>
+
+    <div id="build-dribbble-2" class="step slide" data-x="14700" data-y="2800" data-z="-1000" data-rotate-y="90">
+        <h1>Dribbble: Dashboard</h1>
+        <h3>Search for 'dashboard'</h3>
+        <img src="css/dribbble-2.png"  width="300px" />
+    </div>
+
+    <div id="build-dribbble-3" class="step slide" data-x="14700" data-y="2800" data-z="-2000" data-rotate-y="90">
+        <h1>Dribbble: Dashboard</h1>
+        <h3>A selection of amazing dashboard designs</h3>
+        <img src="css/dribbble-3.png" width="700px"/>
+    </div>
+
+    
+    <div id="build-dribbble-4" class="step slide" data-x="14700" data-y="2800" data-z="-3000" data-rotate-y="90">
+        <h1>Dribbble: Find one that's right for you!</h1>
+        <img src="css/dribbble-4.png" width="700px" />
+    </div>
+
+    <div id="build-dribbble-6" class="step slide" data-x="14700" data-y="2800" data-z="-4000" data-rotate-y="90">
+        <img src="css/dribbble-6.png" width="700px" />
+    </div>
+
+    <div id="build-dribbble-7" class="step slide" data-x="14700" data-y="2800" data-z="-5000" data-rotate-y="90">
+        <img src="css/dribbble-7.png" width="700px" />
+    </div>
+
+    <div id="build-dribbble-8" class="step slide" data-x="14700" data-y="2800" data-z="-6000" data-rotate-y="90">
+        <h1>Here it is!</h1>
+        <h3>Google Plus-esque</h3>
+        <h3>but horiztonal tabs, and Microsoft metro-inspired!</h3>
+        <img src="css/dribbble-8.png" width="700px" />
+    </div>
+
+     <div id="build-logo" class="step slide" data-x="13000" data-y="3500">
+        <h1>Designing Appfail: Crowdsource it!</h1>
+        <h3>Then, we put a brief on 99 designs for a logo.</h3>
+        <h3>For $300, we had 139 logo submissions!</h3>
+        <img src="css/99designs.png" />
+     </div>
+
+    <div id="build-logo-1" class="step slide" data-x="14700" data-y="3500" data-z="-1000" data-rotate-y="90">
+        <h1>First, we put up a brief</h1>
+        <h3>and included our colour scheme!</h3>
+        <img src="css/brief.png" />
+    </div>
+
+    <div id="build-logo-2" class="step slide" data-x="14700" data-y="3500" data-z="-2000" data-rotate-y="90">
+        <h1>Then we got some logos!</h1>
+        <img src="css/logo/logo-1.png" />
+    </div>
+
+    <div id="build-logo-3" class="step slide" data-x="14700" data-y="3500" data-z="-3000" data-rotate-y="90">
+        <img src="css/logo/logo-2.png" />
+    </div>
+
+    <div id="build-logo-4" class="step slide" data-x="14700" data-y="3500" data-z="-4000" data-rotate-y="90">
+        <img src="css/logo/logo-3.png" />
+    </div>
+
+    
+    <div id="build-logo-5" class="step slide" data-x="14700" data-y="3500" data-z="-5000" data-rotate-y="90">
+        <img src="css/logo/logo-4.png" />
+    </div>
+
+    <div id="build-logo-6" class="step slide" data-x="14700" data-y="3500" data-z="-6000" data-rotate-y="90">
+        <h1>... and our favourite!</h1>
+        <img src="css/logo/logo-5.png" />
+    </div>
+
+    <div id="build-logo-7" class="step slide" data-x="14700" data-y="3500" data-z="-7000" data-rotate-y="90">
+        <h1>Eventually we decided on</h1>
+        <img src="css/logo/logo-6.png" />
+    </div>
+
+    <div id="build-logo-8" class="step slide" data-x="14700" data-y="3500" data-z="-8000" data-rotate-y="90">
+        <h1>And then modified this ourselves, to:</h1>
+        <img src="css/logo.png" width="700px" />
+    </div>
+
+     <div id="build-design-combine" class="step slide" data-x="13000" data-y="4200">
+        <h1>Designing Appfail: Put it all together</h1>
+        <h3>Glue it all together, and you have a great looking web site.</h3>
+     </div>
+
+    <div id="build-design-combine-1" class="step slide" data-x="14700" data-y="4200" data-z="-1000" data-rotate-y="90">
+        <h1>What happens when you combine...</h1>
+    </div>
+
+    <div id="build-design-combine-2" class="step slide" data-x="14700" data-y="4200" data-z="-2000" data-rotate-y="90">
+        <h1>This dashboard style</h1>
+        <img src="css/dribbble-8.png" width="700px" />
+    </div>
+
+    <div id="build-design-combine-3" class="step slide" data-x="14700" data-y="4200" data-z="-3000" data-rotate-y="90">
+        <h1>With these colours</h1>
+        <img src="css/colour.png" />
+    </div>
+
+    <div id="build-design-combine-4" class="step slide" data-x="14700" data-y="4200" data-z="-4000" data-rotate-y="90">
+        <h1>And this logo?</h1>
+        <img src="css/logo.png" width="700px" />
+    </div>
+
+    <div id="build-design-combine-5" class="step slide" data-x="14700" data-y="4200" data-z="-5000" data-rotate-y="90">
+        <h1>This dashboard!</h1>
+        <img src="css/dashboard-1.png" width="700px" />
+    </div>
+
+    <div id="build-design-combine-6" class="step slide" data-x="14700" data-y="4200" data-z="-6000" data-rotate-y="90">
+        <img src="css/dashboard.png" width="700px" />
+    </div>
+
+    <div id="build-design-combine-7" class="step slide" data-x="14700" data-y="4200" data-z="-7000" data-rotate-y="90">
+        <h1>And this web-site!</h1>
+        <img src="css/site.png" width="700px" />
+    </div>
+
+    <div id="build-design-combine-8" class="step slide" data-x="14700" data-y="4200" data-z="-8000" data-rotate-y="90">
+        <h1>All without a graphic designer!</h1>
+    </div>
+
+    <div id="launch" class="step slide section peter" data-x="14000" data-y="0" data-rotate-x="90">
+       <h1>The launch</h1>
+    </div>
+
+    <div id="launch-marketing" class="step slide  peter" data-x="14000" data-y="0">
+        <h1>Marketing</h1>
+        <h3>You can't afford to pay for advertising</h3>
+        <h3>Don't focus on pay-per-clicks</h3>
+        <h3><b>How else can you drive traffic?</b></h3>
+    </div>
+
+
+     <div id="launch-influence" class="step slide peter" data-x="14000" data-y="-700">
+        <h1>Marketing: Influence the influencers</h1>
+        <h3>Launched beta in June.</h3>
+        <h3>Our plan: To engage influential people &amp; companies in the dev community.</h3>
+        <h3>Here's what happened.</h3>
+    </div>
+
+    <div id="launch-twitter" class="step slide peter" data-x="14000" data-y="-1400">
+        <h1>Twitter</h1>
+        <h3>We followed a lot of renowned developers on Twitter.</h3>
+        <h3>We knew that a tweet from them would bring traffic.</h3>
+        <h3>We wished that we had pre-existing relationships with these influencers...</h3>
+        <h3>But we didn't.</h3>
+        <br />
+        <h3>So, we simply <b>asked</b> them!</h3>
+    </div>
+
+     <div id="launch-hanselman" class="step slide peter" data-x="14000" data-y="-2100" data-rotate-y="60">
+        <h1>Scott Hanselman</h1>
+        <h3>Retweeted us on day 1 of beta, to 60,000 followers.</h3>
+        <h3>Discussed Appfail in his email newsletter.</h3>
+        <h3>This lead to 2,000 visitors on launch day!</h3>
+        <h3>50 sign ups in the first few days.</h3>
+         <img src="css/hanselman.png" />
+    </div>
+
+    <div id="launch-galloway" class="step slide peter" data-x="14000" data-y="-2800" data-rotate-y="120">
+        <h1>Jon Galloway</h1>
+        <h3>Tweeted us, to 10,000 followers.</h3>
+    </div>
+
+
+    <div id="launch-more" class="step slide peter" data-x="14000" data-y="-3500" data-rotate-y="180">
+        <h1>We wanted more!</h1>
+        <h3>We wanted coverage with more staying power...</h3>
+        <h3>Something that would stay around longer than 1-2 hours.</h3>
+        <h3>We set our sights on the front page of ASP.NET</h3>
+    </div>
+
+    <div id="launch-asp" class="step slide peter" data-x="14000" data-y="-4200" data-rotate-y="180">
+       <img src="css/asp-site.png" width="700px" />
+    </div>
+
+    <div id="launch-asp-2" class="step slide peter" data-x="14000" data-y="-4900" data-rotate-y="180">
+       <img src="css/asp-site2.png" width="700px" />
+    </div>
+
+    <div id="launch-asp-3" class="step slide peter" data-x="14000" data-y="-5600" data-rotate-y="180">
+       <img src="css/asp-site3.png" width="700px" />
+    </div>
+
+    <div id="launch-asp-4" class="step slide peter" data-x="14000" data-y="-6300" data-rotate-y="180">
+        <h1>ASP.NET</h1>
+        <h3>Our blog post 'Do you know when your web site fails?' was featured on the front page of http://asp.net for a week.</h3>
+        <h3>This lead to 8000 blog post views and hundreds of sign ups.</h3>
+        <img src="css/aspnet.png" />
+    </div>
+
+    <div id="launch-appharbor" class="step slide peter" data-x="14000" data-y="-7000" data-rotate-y="240">
+        <h1>AppHarbor</h1>
+        <h3>In a similar vein, we contacted AppHarbor</h3>
+        <h3>They blogged about Appfail a week after we launched beta.</h3>
+    </div>
+
+    <div id="launch-partner" class="step slide peter" data-x="14000" data-y="-7700" data-rotate-y="300">
+        <h1>Partner with established organizations</h1>
+        <h3>Give them an incentive to promote and sell your product!</h3>
+    </div>
+
+    <div id="launch-partner-2" class="step slide peter" data-x="14000" data-y="-8400" data-rotate-y="300">
+        <h1>AppHarbor Add-On</h1>
+        <h3>We integrated Appfail as an add-on for the AppHarbor cloud platform.</h3>
+        <h3>This lead to a large number of sign-ups.</h3>
+        <h3>You can plug Appfail into any AppHarbor web site in just a couple of minutes.</h3>
+        <img src="css/appharboraddon.png" />
+    </div>
+
+    <div id="launch-video" class="step slide" data-x="15000" data-y="0" data-rotate-y="0">
+        <h1>Traffic is great...</h1>
+        <h3>But it's only half the battle </h3>
+        <h3>It's important to present a simple message to users.</h3>
+        <h3><b><i>Why your service is worth paying for!</i></b></h3>
+        <br />
+        <h3>The same message should work for an engineer, or their boss!</h3>
+        <h3>We did this with a product video.</h3>
+    </div>
+
+     <div id="launch-video-2" class="step slide" data-x="15000" data-y="700" data-rotate-y="60">
+        <h1>How To Produce A Professional Product Video in 1 Day</h1>
+        <h3>Ingredients: 1 day & $150.</h3>
+        <video width="640" height="360" controls="controls">
+            <source src="appfail.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="launch-video-3" class="step slide" data-x="15000" data-y="1400" data-rotate-y="120">
+        <h1>How To Produce A Professional Product Video in 1 Day</h1>
+        <span class="stepnumber">1</span>
+        <h3>Write a script</h3>
+        <img src="css/script.png" />
+    </div>
+
+    <div id="launch-video-4" class="step slide" data-x="15000" data-y="2100" data-rotate-y="180">
+        <h1>How To Produce A Professional Product Video in 1 Day</h1>
+        <span class="stepnumber">2</span>
+        <h3>Record your own voice, using your smartphone</h3>
+        <img src="css/voicememo.png" />
+    </div>
+
+    <div id="launch-video-5" class="step slide" data-x="15000" data-y="2800" data-rotate-y="240">
+        <h1>How To Produce A Professional Product Video in 1 Day</h1>
+        <span class="stepnumber">3</span>
+        <h3>Create the video with PowToon, synced to your voice.</h3>
+        <h4>4-6 hours</h4>
+        <img src="css/powtoon.png" />
+    </div>
+    
+    <div id="launch-video-6" class="step slide" data-x="15000" data-y="3500" data-rotate-y="300">
+        <h1>How To Produce A Professional Product Video in 1 Day</h1>
+        <span class="stepnumber">4</span>
+        <h3>Crowd source a professional voice over, for $100.</h3>
+        <h4><a href="http://voicebunny.com">http://voicebunny.com</a></h4>
+        <img src="css/voicebunny.png" />
+    </div>
+
+
+    <div id="launch-organic-search" class="step slide peter" data-x="16000" data-y="0" data-rotate-y="0">
+        <h1>Organic Search Results</h1>
+        <h3>As a startup, you <b><i>really</i></b> don't want to pay-per-click for ads.</h3>
+        <h3>For a tech-savvy audience, pay-per-click is ineffective.</h3>
+        <br />
+        <h3>Pete, with a background in journalism, wanted to run a press release.</h3>
+        <h3>Sam was skeptical -- "who would read this blatant advertising?"</h3>
+    </div>
+
+    <div id="launch-organic-2" class="step slide  peter" data-x="16000" data-y="700" data-rotate-y="0">
+        <h1>Pete won!</h1>
+        <h3>We paid to have our press release sent to hundreds of outlets.</h3>
+        <h3>We didn't get any top-tier media coverage</h3>
+        <h3>But our press release was copied as an "article" hundreds of times</h3>
+        <img src="css/prweb.png" />
+    </div>
+
+    <div id="launch-organic-result" class="step slide  peter" data-x="16000" data-y="1400" data-rotate-y="0">
+        <h1>Our organic search rankings went through the roof!</h1>
+        <h3>Appfail is in the top Google results for a large array of important search terms.</h3>
+        
+    </div>
+
+     <div id="launch-dogfood" class="step slide" data-x="17000" data-y="0" data-rotate-y="0">
+        <h1>Dogfood!</h1>
+        <h3>How can you improve the platform if you don't use it constantly?</h3>
+        <h3>Be your most avid user and your biggest critic!</h3>
+    </div>
+
+    <div id="launch-dogfood-issue" class="step slide" data-x="17000" data-y="700" data-rotate-y="0">
+        <h1>We used Appfail <b>ON</b> Appfail!</h1>
+        <h3>One major issue during launch was a browser & device specific problem: on twitter in iOS only.</h3>
+        <h3>Took some time to find & diagnose. Appfail <b><i>could</i></b> have helped us diagnose this sooner!</h3>
+    </div>
+
+
+     <div id="launch-dogfood-feature" class="step slide" data-x="17000" data-y="1400" data-rotate-y="0">
+        <h1>New feature</h1>
+        <h3>This lead to a new feature, in days!</h3>
+        <h3>Graphical platform & browser info.</h3>
+         <h3>Blogged about how we used our experience to improve the platform.</h3>
+        <img src="css/browser.png" width="750px" />
+        
+    </div>
+    
+     <div id="launch-dogfood-opportunity" class="step slide" data-x="17000" data-y="2100" data-rotate-y="0">
+        <h1>Be your most avid user</h1>
+        <h3>We hit some teething issues during first few days of beta.</h3>
+        <h3>But because we use Appfail <b><i>on</i></b> Appfail, we found & fixed them quickly.</h3>
+        <h3>Every failure is an opportunity!</h3>
+        <h3>We emailed affected users an apology, along with a walkthrough of how we used Appfail to find & fix the issues!</h3>
+        <img src="css/fix.png" />
+        
+    </div>
+    
+     <div id="launch-dogfood-devops" class="step slide peter" data-x="18000" data-y="0">
+        <h1>Devops Devops Devops</h1>
+        <h3>Do you have "at-a-glance" visibility of your services status?</h3>
+        <h3>If not, how do you know if it's working or not?</h3>
+         <br />
+         <h3>We didn't have any devops at launch</h3>
+         <h3>We figured -- let's get it out there and see if anyone likes it first.</h3>
+    </div>
+
+    <div id="launch-dogfood-devops-2" class="step slide peter" data-x="18000" data-y="-700">
+        <h1>The problem?</h1>
+        <h3>To start with, things <b>will</b> go wrong!</h3>
+        <h3><b>Nobody</b> likes a service that doesn't work properly.</h3>
+        <br/>
+        <h3>At one point, our service was malfunctioning for 3 days, and we didn't know!</h3>
+    </div>
+
+    <div id="launch-dogfood-dashing" class="step slide peter" data-x="18000" data-y="-1400">
+        <h1>dashing.net</h1>
+        <h3>We needed a dashboard...</h3>
+        <h3>So Pete built one - open source!</h3>
+        <h3>Works on any screen/device</h3>
+        <h3>It can display <i>anything</i></h3>
+    </div>
+
+    <div id="launch-dogfood-devops-3" class="step slide peter" data-x="18000" data-y="-2100">
+        <h1>At-a-glance operations dashboard</h1>
+        <h3>High level reports that tell us what the service is doing.</h3>
+        <h3>We watch this every day, and know if things go awry!</h3>
+        <img src="css/devops.png" width="800px" />
+    </div>
+
+    <div id="growth" class="step slide section" data-x="19000" data-y="0" data-rotate-x="90">
+       <h1>Growing the business</h1>
+        <h3>Lesson learned</h3>
+    </div>
+
+     <div id="growth-foundation" class="step slide" data-x="19000" data-y="0" data-rotate-y="0">
+        <h1>Sure Up The Foundations</h1>
+        <h3>Initially, you've focused on a minimum viable product</h3>
+        <h3>You've made pragmatic decisions to get it "out the door"</h3>
+        <br />
+        <h3>Sooner or later, you have to grow up</h3>
+        <br />
+        <h3>Hit performance pain due to earlier architectural decisions</h3>
+        <h3>Needed a solid foundation for growth</h3>
+    </div>
+
+    <div id="growth-foundation-2" class="step slide" data-x="19000" data-y="700" data-rotate-y="0">
+        <h1>Rock Solid Platform</h1>
+        <h3>Our core foundation was a composition of disparate services</h3>
+        <h3>AppHarbor + AWS + MongoHQ</h3>
+        <h3>Being in 3 places, this was hard to manage!</h3>
+        <br />
+        <h3>Each provided an abstraction to make things 'simpler'</h3>
+        <h3>But every abstraction removes your ability to tweak/control things.</h3>
+        <br />
+        <h3>So, we decided to move to Windows Azure</h3>
+        <h3>Unified strategy - on a rock solid platform</h3>
+    </div>
+
+    <div id="growth-foundation-3" class="step slide" data-x="19000" data-y="1400" data-rotate-y="0">
+        <h1>Designing For Growth</h1>
+        <h3>We needed to reduce the complexity!</h3>
+        <h3>Simplify everything to make it easier to expand service AND team</h3>
+        <h3>Our Vision</h3>
+        <ul>
+            <li>A single unified platform</li>
+            <li>One portal to manage all Appfail components</li>
+            <li>Consistent method for deployment</li>
+            <li>Consistent model for diagnostics</li>
+            <li>We didn't want to manage infrastructure!</li>
+        </ul>
+        
+        <br />
+        <h3>We also decided to rearchitect for high availability</h3>
+    </div>
+
+     <div id="growth-foundation-4" class="step slide " data-x="19000" data-y="2100" data-rotate-y="0">
+        <h1>Designing For Growth</h1>
+        <h3>Now becoming a well established service.</h3>
+        <h3>No longer acceptable to go offline for hours at a time.</h3>
+        <h3>Needed architecture that supported system upgrades without taking the system down.</h3>
+        <br />
+        <h3>Azure made this possible</h3>
+         <ul>
+             <li>Windows Azure service bus and asynchronous messaging</li>
+             <li>VIP Swap</li>
+             <li>IAAS & PAAS meant we had the best of both worlds</li>
+         </ul>
+    </div>
+
+    <div id="growth-foundation-5" class="step slide " data-x="19000" data-y="2800" data-rotate-y="0">
+        <h1>Remove Strong Dependencies</h1>
+        <h3><img src="css/architecture.png" /></h3>
+    </div>
+
+    <div id="growth-foundation-6" class="step slide " data-x="19000" data-y="3500" data-rotate-y="0">
+        <h1>BizSpark</h1>
+        <h3>We became a Bizspark sponsored startup</h3>
+        <h3>Microsoft supported us with a reduced hosting bill</h3>
+        <h3>Allowed us to provide a blazingly fast service to customers</h3>
+    </div>
+
+
+
+     <div id="growth-assumptions" class="step slide peter" data-x="20000" data-y="0" data-rotate-y="0">
+        <h1>Challenge Assumptions</h1>
+        <h3>Don't be afraid to change <i>everything</i></h3>
+        <h3>if the evidence suggests that you should</h3>
+        
+        <h3>Put your ego aside, and challenge your assumptions</h3>
+
+         <img src="css/assumptions.jpg" />
+    </div>
+
+        <div id="growth-assumptions-2" class="step slide peter" data-x="20500" data-y="0" data-rotate-y="90"  data-z="-1000">
+            <h1>"Free forever"</h1>
+            <h3>During beta, our service was free</h3>
+            <h3>We promised "free forever" -- to have a basic, free plan alongside our paid plans</h3>
+            <br />
+            <h3>We came out of beta, and launched our paid plans</h3>
+            <h3>...and <i>barely</i> anyone signed up.</h3>
+            <img src="css/free.png" />
+        </div>
+
+    
+
+        <div id="growth-assumptions-3" class="step slide peter" data-x="20500" data-y="0" data-rotate-y="90" data-z="-2000">
+            <h1>We tried it all...</h1>
+
+            <h3>We tried restricting the free plan</h3>
+            <br />
+            <h3>We tried making other plans more prominent</h3>
+            <br />
+            <h3>We tried hiding the free plan behing a small link</h3>
+            <br />
+            <h3>But people continued to choose it...</h3>
+            <h3>Nothing worked... but we needed to pay the bills!</h3>
+        </div>
+
+        <div id="growth-assumptions-4" class="step slide peter" data-x="20500" data-y="0"  data-rotate-y="90" data-z="-3000">
+            <h1>Could we <i>remove</i> the free plan?</h1>
+            <h3>Our users will revolt!</h3>
+            <h3>Our users will take to Twitter in their masses!</h3>
+            <img src="css/mob.png" />
+            <br />
+            <h3>... right?</h3>
+        </div>
+
+        <div id="growth-assumptions-5" class="step slide peter" data-x="20500" data-y="0"  data-rotate-y="90" data-z="-4000">
+            <h1>So we changed everything</h1>
+            <br />
+            <h3>And the silence was deafening!</h3>
+            <h3>No user backlash.</h3>
+            <h3>No angry social media commentary.</h3>
+            <br />
+            <h3>Just paid sign-ups.</h3>
+            <h3>Less of them, but paid ones.</h3>
+            <br />
+            <h3>Now Appfail had a future</h3>
+        </div>
+
+        <div id="growth-assumptions-6" class="step slide peter" data-x="20500" data-y="0"  data-rotate-y="90" data-z="-5000">
+            <h1>Get over yourself!</h1>
+            <h3>As a startup - you're not <i>that</i> important!</h3>
+            <br />
+            <h3>You don't have <i>that many</i> users</h3>
+            <h3>and they aren't watching your every move</h3>
+            <br />
+            <h3>It's OK to change things -- just don't change them <i>all</i> the time.</h3>
+        </div>
+<!--
+    <div id="growth-personal" class="step slide" data-x="21000" data-y="0" data-rotate-y="0">
+        <h1>Personally engage with your users</h1>
+        <h3>Be proactive -- don't wait for your users to complain!</h3>
+        <h3>Users are more likely to leave for a competitor, than inform you of problems</h3>
+        <h3>It's time consuimg to report an issue, and wait for a response.</h3>
+    </div>
+
+        <div id="growth-personal-1" class="step slide" data-x="21500" data-y="0"  data-rotate-y="90" data-z="-1000">
+            <h1>Communication with a personal touch</h1>
+            <h3>Just a few users tweeted us to complain about performance issues</h3>
+            <br />
+            <h3>We suspected a widespread issues...</h3>
+            <h3>Sam sent a personal email directly to users, requesting feedback on the service.</h3>
+        </div>
+
+    
+        <div id="growth-personal-2" class="step slide" data-x="21500" data-y="0"  data-rotate-y="90" data-z="-2000">
+            <h1>Restore the relationship</h1>
+            <h3>Received detailed, well constructed feedback.</h3>
+            <h3>Some users were at breaking point, and ready to leave our service.</h3>
+            <br />
+            <h3>We gave them personal service and stayed in contact until it was fixed</h3>
+            <h3>Restored the relationship.</h3>
+            <h3>Didn't lose any of these users.</h3>
+        </div>
+-->
+    <div id="growth-investment" class="step slide" data-x="22000" data-y="0" data-rotate-y="0">
+        <h1>Don't be afraid to give up equity</h1>
+        <h3>... for the <b><i>right</i></b> partner!</h3>
+        <br />
+        <h3>The wisdom out there is to find a VC for funding</h3>
+        <img src="css/fatcat.jpg" />        
+    </div>
+
+        <div id="growth-investment-2" class="step slide"  data-x="22500" data-y="0"  data-rotate-y="90" data-z="-1000">
+            <h1>We knew what this would mean</h1>
+            <h3>It would mean giving up a job we loved -- and financial security for our families.</h3>
+            <h3>So we never considered VC funding at all...</h3>
+            <br />
+            
+        </div>
+
+        <div id="growth-investment-3" class="step slide"  data-x="22500" data-y="0"  data-rotate-y="90" data-z="-2000">
+            <h1>Enter: Kiandra IT</h1>
+            <h3>We entered into discussions with our employer: Kiandra IT</h3>
+            <h3>We partnered!</h3>
+            <h3>...and a new world of opportunities opened for Appfail.</h3>
+            <img src="css/kiandra.jpg" />
+        </div>
+
+        <div id="growth-investment-4" class="step slide"  data-x="22500" data-y="0"  data-rotate-y="90" data-z="-3000">
+            <h1>Amazing!</h1>
+            <br />
+            <h3>We could now focus on Appfail during work hours at Kiandra IT</h3>
+            <h3>AND we now had an awesome team available to us</h3>
+            <h3>For example, Lars Klint came on board and helped us build our Windows 8 & Windows Phone app</h3>
+        </div>
+
+        <div id="growth-investment-5" class="step slide"  data-x="22500" data-y="0"  data-rotate-y="90" data-z="-4000">
+            <h1>The truth is: We were very lucky</h1>
+            <h3>Kiandra IT is a fantastic company</h3>
+            <h3>Run by directors who share our passion for making awesome software.</h3>
+            
+            <br />
+            <h3>Don't <i>just</i> aim to get VC funding -- consider alternatives!</h3>
+        </div>
+
+
+    <div id="advice" class="step slide section" data-x="23000" data-y="0" data-rotate-x="90">
+        <h1>Reflecting on Appfail</h1>
+        <h3>Advice before departing on the startup journey</h3>
+    </div>
+
+    <div id="advice-millionaire" class="step slide peter" data-x="23000" data-y="0" data-rotate-y="0">
+        <h1>Don't aim to be a millionaire</h1>
+        <h3>Aim to build a product that you love. That you believe in.</h3>
+        <br />
+        <h3>Of course, everyone <i>wants</i> to make millions</h3>
+        <h3>But it <i>really</i> should be a secondary concern</h3>
+        <img src="css/fatcat.jpg" />
+    </div>
+
+        <div id="advice-love" class="step slide peter" data-x="23000" data-y="700" >
+                 <h1>If you build a product that you love...</h1>
+                 <ul>
+                    <li>You'll build a better product.</li>
+                    <li>You'll go the extra mile when things get tough.</li>
+                    <li>You'll make a product that your users will love.</li>
+                </ul>
+                 
+        </div>
+
+    <div id="advice-commitment" class="step slide" data-x="24000" data-y="0" data-rotate-y="0">
+        <h1>Be committed</h1>
+        <h3>What's the difference between...</h3>
+        <br />
+        <h3>Your friend who says:</h3>
+        <h3 style="font-size:45px; line-height: 60px; margin-left: 50px;">"I came up with the idea for Facebook WAY before Facebook"</h3>
+        
+    </div>
+
+        <div id="advice-commitment-2" class="step slide" data-x="24000" data-y="700" >
+                 <h1>...and this guy?</h1>
+                 <img src="css/mark.jpg" />
+        </div>
+
+        <div id="advice-commitment-3" class="step slide" data-x="24000" data-y="1400" >
+            <h1>Well, he actually created Facebook.</h1>
+            <h3>Building the first 80% of your product is the best part</h3>
+            <h3>The last 20% is laborious!</h3>
+            <br />
+            <h3>It feels like your day job:</h3>
+            <ul>
+                <li>Implementing standard infrastructure</li>
+                <li>Testing</li>
+                <li>Browser compatibility</li>
+                <li>etc...</li>
+            </ul>
+            <h3>But this is what separates those who <b>have it</b>, from those who don't</h3>
+        </div>
+
+    
+    <div id="advice-impact" class="step slide peter" data-x="25000" data-y="0" data-rotate-y="0">
+        <h1>Don't underestimate the impact this will have on your life.</h1>
+        <h3>Running a startup is hard work.</h3>
+        <br />
+        <h3>Everyone thinks at the start:</h3>
+        <h3>It's OK -- if it takes off, I'll get to work on it full-time.</h3>
+        <h3>If it doesn't -- I'll shut it down & get on with my life.</h3>
+        
+    </div>
+
+        <div id="advice-impact-2" class="step slide peter" data-x="25000" data-y="700" >
+            <h1>The problem?</h1>
+
+            <h3>Wild overnight success is rare</h3>
+            <h3>In most cases, you have to work at it over time.</h3>
+            <h3>Initially you have to work, for no/little money to:</h3>
+
+            <ul>
+                <li>Build a customer base</li>
+                <li>Fix bugs</li>
+                <li>Communicate with customers</li>
+                <li>Add new features</li>
+            </ul>
+            <h3>You work 2 jobs, one at work, and one after hours.</h3>
+            <h3>This will be hard at times.</h3>
+        </div>
+
+     <div id="advice-flowers" class="step slide" data-x="26000" data-y="0" data-rotate-y="0">
+        <h1>Buy your wife flowers</h1>
+        <h3>It's tough on your significant other</h3>
+        <h3>... and if you're anything like me, you can become myopic.</h3>
+        <h3>Don't forget about the rest of your life, and what really matters.</h3>
+
+         <img src="css/flowers.jpeg"  />
+    </div>
+    <div id="advice-twins" class="step slide" data-x="27000" data-y="0" data-rotate-y="0">
+        <h1>Oh, and... unless you're mad like me</h1>
+        <h3>don't have twins 2 months after launch!</h3>
+        <img src="css/twins.jpg" width="700px" />
+    </div>
+
+     <div id="advice-final" class="step slide" data-x="28000" data-y="0" data-rotate-y="0">
+        <h1>But most of all...</h1>
+    </div>
+
+    <div id="advice-enjoy" class="step slide" data-x="29000" data-y="0" data-rotate-y="0">
+        <h1 style="font-size:90px">Enjoy it!</h1>
+    </div>
+
+    <div id="advice-enjoy-2" class="step slide" data-x="29000" data-y="1000" data-rotate-y="0">
+        <h1>Because unless you're superman</h1>
+        <img src="css/superman.jpg" width="650px"/>
+    </div>
+
+    <div id="advice-enjoy-3" class="step slide" data-x="29000" data-y="2000" data-rotate-y="0">
+        <h1>or Elon Musk</h1>
+        <img src="css/musk.jpg" />
+    </div>
+
+    <div id="Div1" class="step slide" data-x="29000" data-y="3000" data-rotate-y="0">
+        <h1>you've only got a couple of these in you!</h1>
+    </div>
+
+    <div id="closing" class="step slide" data-x="30000" data-y="0">
+        <h1>Thanks for listening!</h1>
+        <h3>Thanks to Microsoft and Kiandra IT for their help</h3>
+        <h3>in organizing and publicising tonight's talk.</h3>
+        <br />
+        <h3>We'll be hanging around afterwards if you want to have a chat!</h3>
+    </div>
+
+    <div id="final" class="step slide" data-scale="10" data-x="9000" data-y="0" /></div>
+</div>
+
+<script src="js/impress.js"></script>
+<script>    impress().init();</script>
+
+</body>
+</html>
